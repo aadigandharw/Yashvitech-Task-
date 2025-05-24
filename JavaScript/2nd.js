@@ -1,0 +1,1 @@
+document.getElementById('Login').onclick= "document.getElemetById('Form').innerHTML='Change Ho gya Bhai' "

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <h3 style="justify-content: center;text-align: center;">Login Here!!!</h3>
+    <div style="height: 200px;width: 25vw; background-color: rgb(50, 140, 214);color: white;justify-content: center;align-items: center;display: flex;
+    margin-left: 38%;">
+    
+    <form action="" style="justify-content: center;align-items: center;display: flex;">
+        <table>
+
+            <tr >
+                <td >
+                    <label for="" >Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="Name">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="">Password:</label>
+                </td>
+                <td>
+                    <input type="Password" id="Password">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Email:</label>
+                    </td>
+                <td>
+                    <input type="email" id="Email">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="">Contact:</label>
+                    </td>
+                <td>
+                    <input type="number" id="Contact">
+                </td>
+            </tr>
+        
+            <tr>
+                <td><label for="">Address:</label>
+                    </td>
+                <td>
+                    <input type="text" id="Address">
+                </td>
+            </tr>
+        
+
+
+        </table>
+
+    </form>
+
+    </div>
+
+
+<div style="margin-left: 38%; ">      
+    <button style="text-align: center;height: 30px;width: 372px;
+    " onclick="Form()">Submit</button>
+
+</div>
+
+<div style="margin-left: 41%;">
+    <table border="2" style="text-align: center;">
+        <h3 style="margin-left:30px ;" >Your DataBase Is Here</h3>
+        <tr>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Address</th>
+        </tr>
+
+        <tr>
+            <td><p id="userName"></p></td>
+            <td><p id="userPassword"></p></td>
+            <td><p id="userEmail"></p></td>
+            <td><p id="userContact"></p></td>
+            <td><p id="userAddress"></p></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+
+
+<script>
+    
+    
+    function Form(){
+
+    
+    Name= document.getElementById('Name').value
+    Password= document.getElementById('Password').value
+    Email= document.getElementById('Email').value
+    Contact= document.getElementById('Contact').value
+    Address=document.getElementById('Address').value
+    
+
+    document.getElementById('userName').innerHTML=Name
+    document.getElementById('userPassword').innerHTML=Password
+    document.getElementById('userEmail').innerHTML=Email
+    document.getElementById('userContact').innerHTML=Contact
+    document.getElementById('userAddress').innerHTML=Address
+
+
+
+
+    console.log(Name)
+    console.log(Password)
+    console.log(Email)
+        console.log(Contact)
+            console.log(Address)
+    }
+
+</script>
+
+</html>
