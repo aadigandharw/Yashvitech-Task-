@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task-4</title>
+</head>
+
+<body style="margin: 0;">
+    <div style="display: flex;">
+
+        <!-- Div For Task-1 Task-ODD And Even -->
+
+        <div
+            style="margin-left: 150px; height:300px;width: 25vw; text-align: center;background-color: rgb(0, 38, 255);justify-content: center;align-items: center;color: white;">
+            <h2>
+                Task-1
+            </h2>
+            <h3 style="margin-top: 50px;">Find Your Number Is Even Or Odd</h3>
+
+            <h4><label for="">Enter Your Number</label></h4>
+            <input type="number" style="height:23px ; " id="Number">
+            <button style="width: 100px;height: 30px;" onclick="OddEven()">Check</button>
+            <h4 id="ans"></h4>
+
+
+
+
+        </div>
+
+        <!-- div for Task-2 Task-Traffic Signal -->
+
+        <div
+            style="height:300px;width: 25vw; color:azure;text-align: center;background-color: rgb(38, 34, 84);justify-content: center;align-items: center;margin-left: 30px;">
+            <h2>
+                Task-2
+            </h2>
+            <h3 style="margin-top: 20px;color: white;">Traffic Signal</h3>
+            <label for="" id="color">Choose Your Color</label> <br>
+
+
+            <table>
+                <tr style="text-align: center;">
+                    <td><input value="Red" name="color" type="radio" style="margin-left: 80px;"><label
+                            for="">Red</label></td>
+                    <br>
+
+                    <td><input type="radio" name="color" value="Orange"> <label for="">Orange</label></td>
+
+                    <td><input type="radio" name="color" value="Green"> <label for="">Green</label></td>
+                </tr>
+            </table>
+            <button style="width: 100px;height: 30px; margin-top: 10px;" onclick="TrafficSignal() ">Result</button>
+
+
+            <h4 id="result"></h4>
+
+        </div>
+
+
+        <!-- Div For Task-3 TaskName = Voting -->
+
+        <div
+            style="height:300px;width: 25vw; color:azure;text-align: center;background-color: rgb(85, 178, 105);justify-content: center;align-items: center;margin-left: 30px;">
+            <h2>
+                Task-3
+            </h2>
+            <h3 style="margin-top: 20px;color: white;margin-bottom: 10px;">Parliament Voting</h3>
+            <h4><label for="">Enter Your Age</label></h4>
+
+            <input type="number" style=" height: 23px;" id="age">
+            <button style="width: 100px;height: 30px; margin-top: 10px;" onclick="Parliament()">Result</button>
+
+            <h4 id="Parliament"></h4>
+
+        </div>
+
+
+
+
+
+    </div> 
+    
+    <!-- div For Task-4 -->
+
+    <div style="width: 50vw; height: 400px; background-color: darkblue; color: white; text-align: center; margin-top: 10px; margin-left: 350px;">
+    <h2 style="padding-top: 20px;">Task-4</h2>
+    <h3>MarkSheet</h3>
+
+    <table style="margin-left: 250px;">
+        <tr>
+            <td><label for="Physics">Physics</label></td>
+            <td><input type="number" placeholder="Enter Your Physics Marks" id="Physics"></td>
+        </tr>
+        <tr>
+            <td><label for="Chemistry">Chemistry</label></td>
+            <td><input type="number" placeholder="Enter Your Chemistry Marks" id="Chemistry"></td>
+        </tr>
+        <tr>
+            <td><label for="MathMatics">Mathematics</label></td>
+            <td><input type="number" placeholder="Enter Your Mathematics Marks" id="MathMatics"></td>
+        </tr>
+        <tr>
+            <td><label for="English">English</label></td>
+            <td><input type="number" placeholder="Enter Your English Marks" id="English"></td>
+        </tr>
+        <tr>
+            <td><label for="Hindi">Hindi</label></td>
+            <td><input type="number" placeholder="Enter Your Hindi Marks" id="Hindi"></td>
+        </tr>
+    </table>
+
+    <button style="width: 100px; height: 30px; margin-top: 10px; margin-left: 30px;" onclick="Calculate()">Calculate</button>
+
+    <h4 id="Percentage"></h4>
+    <h4 id="Calculated"></h4>
+</div>
+
+
+
+
+</body>
+
+<script>
+    // JS For Task-1 Task Name = EVEN ODD
+    function OddEven() {
+        number = document.getElementById('Number').value
+
+        if (number < 0) {
+            document.getElementById('ans').innerHTML = "Enter  Positive Number"
+        }
+        else if (number % 2 != 0) {
+            document.getElementById('ans').innerHTML = "Your Number is Odd Number"
+        }
+
+        else {
+            document.getElementById('ans').innerHTML = "Your Number Is Even Number"
+        }
+
+
+    }
+
+    // Js For Task-2 Task Name = Traffic Signal
+    function TrafficSignal() {
+
+        color = document.querySelector('input[name="color"]:checked').value
+
+        if (color == "Red") {
+            document.getElementById('result').innerHTML = "Stop Traffic Is Full"
+
+        }
+
+        else if (color == "Green") {
+            document.getElementById('result').innerHTML = "You Can Go Traffic Is Clear"
+
+        }
+
+        else {
+            document.getElementById('result').innerHTML = "Wait Few Moments"
+
+        }
+
+    }
+
+
+    // js For Task-3 Task Name= Voting
+    function Parliament() {
+        let age = parseInt(document.getElementById('age').value);
+
+        if (age < 0) {
+            document.getElementById('Parliament').innerHTML = "Age Never  Be A Negative Enter Properly.";
+        } else if (age >= 18) {
+            document.getElementById('Parliament').innerHTML = "You are eligible to vote and help choose your Prime Minister.";
+        } else {
+            document.getElementById('Parliament').innerHTML = "You are not eligible to vote yet. Please wait a few more years.";
+        }
+    }
+
+    // Div  For Task-4 Task : MarkSheet
+
+    function Calculate() {
+
+        let ph = Number( document.getElementById('Physics').value)
+        let ch = Number(  document.getElementById('Chemistry').value)
+        let mt = Number(  document.getElementById('MathMatics').value)
+        let eg = Number(  document.getElementById('English').value)
+        let hd = Number(  document.getElementById('Hindi').value)
+
+        let total = ph + ch + mt + eg + hd
+
+        let percentage = total/5
+
+        document.getElementById('Percentage').innerHTML = "percentage: " + percentage + "%"
+
+        if (percentage > 90) {
+            document.getElementById('Calculated').innerHTML = "You Scored A+"
+
+        }
+        else if (percentage >75) {
+            document.getElementById('Calculated').innerHTML = "You Scored A"
+
+        }
+        
+        else if (percentage >60) {
+            document.getElementById('Calculated').innerHTML = "You Scored B"
+
+        }
+        
+        else if (percentage >45) {
+            document.getElementById('Calculated').innerHTML = "You Scored C"
+
+        }    
+        
+        else if (percentage >33) {
+            document.getElementById('Calculated').innerHTML = "You Scored D"
+
+        }         
+        else {
+            document.getElementById('Calculated').innerHTML = "You Failed"
+        }
+    }
+
+
+</script>
+
+
+</html>
